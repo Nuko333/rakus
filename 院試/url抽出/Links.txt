@@ -4,6 +4,9 @@ https://bonjiri-blog.com/powershell/scrape-href-powershell-webpage/
 ○テキストファイルに書き出し
 https://qiita.com/TAKA-SHU/items/d4467583c62d9b556fa4
 
+○テキストのデータ読み込み
+https://qiita.com/daifukusan/items/fcc0f8c9ee0c47c68a72
+
 ----------------------------------------------------------
 
 $response =Invoke-WebRequest "https://www.jstage.jst.go.jp/browse/sugaku/73/4/_contents/-char/ja" -UseBasicParsing
