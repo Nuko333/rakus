@@ -1,0 +1,11 @@
+○url抽出の説明
+https://bonjiri-blog.com/powershell/scrape-href-powershell-webpage/
+
+○テキストファイルに書き出し
+https://qiita.com/TAKA-SHU/items/d4467583c62d9b556fa4
+
+----------------------------------------------------------
+
+$response =Invoke-WebRequest "https://www.jstage.jst.go.jp/browse/sugaku/73/4/_contents/-char/ja" -UseBasicParsing
+$links = $response.Links | Where-Object {$_.href -like "*pdf*"} | Select-Object -ExpandProperty href
+$links > C:\Users\user\Desktop\temp01.txt
