@@ -7,8 +7,24 @@ https://qiita.com/TAKA-SHU/items/d4467583c62d9b556fa4
 ○テキストのデータ読み込み
 https://qiita.com/daifukusan/items/fcc0f8c9ee0c47c68a72
 
+○リダイレクト
+https://algorithm.joho.info/powershell/file-redirect-ps1/
+
 ----------------------------------------------------------
 
 $response =Invoke-WebRequest "https://www.jstage.jst.go.jp/browse/sugaku/73/4/_contents/-char/ja" -UseBasicParsing
 $links = $response.Links | Where-Object {$_.href -like "*pdf*"} | Select-Object -ExpandProperty href
 $links > C:\Users\user\Desktop\temp01.txt
+
+
+------------------------------------------------------------
+繰り返し読み込む
+
+$ur =  get-content "C:\Users\佐野南教室\Desktop\uuu.txt"
+
+for ($i = 0; $i -lt 3; $i++) {
+  $response =Invoke-WebRequest $ur[$i] -UseBasicParsing
+  $links = $response.Links | Where-Object {$_.href -like "*pdf*"} | Select-Object -ExpandProperty href
+  $links >> C:\Users\佐野南教室\Desktop\temp01.txt
+}
+
