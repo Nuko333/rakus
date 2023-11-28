@@ -30,9 +30,13 @@ temp001.txtに上書きしていく(アドレスは要変更！！)
 
 $ur =  get-content "C:\Users\佐野南教室\Desktop\uuu.txt"
 for ($i = 0; $i -lt 3; $i++) {
-
   $response =Invoke-WebRequest $ur[$i] -UseBasicParsing
 　$links = $response.Links | Where-Object {$_.href -like "*pdf*"} | Select-Object -ExpandProperty href
 　$links >> C:\Users\佐野南教室\Desktop\temp01.txt
 }
 
+
+******uuu.txtの内容*********
+https://www.ms.u-tokyo.ac.jp/~ito/
+https://www.ms.u-tokyo.ac.jp/~mieda/papers-j.html
+column3
