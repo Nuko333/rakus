@@ -21,16 +21,16 @@ $links > C:\Users\user\Desktop\temp01.txt
 繰り返し読み込む
 
 rem uuu.txtに抽出したページのアドレスを書き込む！！
-rem $urにファイルuuu.txtを読み込む(""のアドレスは要変更！！)
+rem urにファイルuuu.txtを読み込む(""のアドレスは要変更！！)
 $ur =  get-content "C:\Users\佐野南教室\Desktop\uuu.txt"
 
 rem for文で繰り返し！！
 for ($i = 0; $i -lt 3; $i++) {
 
-　rem $responseでuuu.txtのi行目のurlを取得！！
+　rem responseでuuu.txtのi行目のurlを取得！！
   $response =Invoke-WebRequest $ur[$i] -UseBasicParsing
 
-  rem $linksに文字列"pdf"を含むURLを格納
+  rem linksに文字列"pdf"を含むURLを格納
 　$links = $response.Links | Where-Object {$_.href -like "*pdf*"} | Select-Object -ExpandProperty href
 
 　rem temp001.txtに上書きしていく(アドレスは要変更！！)
