@@ -1,0 +1,37 @@
+○htmlをpdf保存
+https://note.com/page10/n/n491670ca03fa
+
+
+
+--------------------------------------------
+# Google Chromeのパスを指定します。
+$chromePath = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+
+# URLをユーザーに入力させます。
+$url = Read-Host -Prompt 'URLを入力してください'
+
+# HTMLを取得します。
+$html = Invoke-WebRequest -Uri $url
+
+# HTMLからタイトルを取得します。
+$title = $html.ParsedHtml.title
+
+# ファイル名として使えない文字を削除します。
+$invalidChars = [IO.Path]::GetInvalidFileNameChars()
+foreach ($char in $invalidChars) {
+    $title = $title.Replace($char, '')
+}
+
+# タイトルが長すぎる場合は切り詰めます。
+if ($title.Length -gt 100) {
+    $title = $title.Substring(0, 100)
+}
+
+# 保存先のPDFファイル名を指定します。
+$pdfPath = "$env:USERPROFILE\Desktop\$title.pdf"
+
+# Chromeをヘッドレスモードで起動し、指定されたURLのページをPDFとして保存します。
+& $chromePath --headless --print-to-pdf=$pdfPath $url
+
+# スクリプトの終了メッセージを表示します。
+Write-Host "PDFが作成されました。保存先：$pdfPath"
