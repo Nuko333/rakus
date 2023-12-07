@@ -19,6 +19,8 @@ https://buralog.jp/powershell-from-full-path-get-only-filename/
 ○左から、○文字目を
 https://bayashita.com/p/entry/show/221
 
+★PDFのみ保存できる
+https://qiita.com/hiron2225/items/eb5cbf18fed27b96a622
 ----------------------------------------------------------
 
 $response =Invoke-WebRequest "https://www.jstage.jst.go.jp/browse/sugaku/73/4/_contents/-char/ja" -UseBasicParsing
