@@ -35,3 +35,11 @@ $pdfPath = "$env:USERPROFILE\Desktop\$title.pdf"
 
 # スクリプトの終了メッセージを表示します。
 Write-Host "PDFが作成されました。保存先：$pdfPath"
+
+
+***ファイル名に使えない文字を削除する**
+https://qiita.com/SAITO_Keita/items/38979e0655012c412a5b
+例　#$titleから不要な文字"\"を削除
+$title="a\b"
+$titl=[RegEx]::Replace($title, "[{0}]" -f [RegEx]::Escape([string][System.IO.Path]::GetInvalidFileNameChars()) , '')
+#$titlと出力すると、abと表示される。
