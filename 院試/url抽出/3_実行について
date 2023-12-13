@@ -1,5 +1,24 @@
 ○実行について
 https://qiita.com/tomoko523/items/df8e384d32a377381ef9
+batファイルを作って、コマンドプロンプトで実行してる？？
+
+○コマンドプロンプトの環境変数について
+https://www.javadrive.jp/command/command/index4.html#section3
 
 
-○バッチファイルで実行したい！！
+○バッチファイルで実行の例
+
+**aaa.bat**
+@echo off
+echo "START!!!"
+powershell -NoProfile -ExecutionPolicy Unrestricted %USERPROFILE%\Dropbox\PC\Desktop\testt.ps1
+echo "Accomplish!!"
+pause > nul
+exit
+
+
+**testt.ps1**
+function Samp($x, $y){
+Write-Host ($x + $y)
+}
+Samp 1 2
