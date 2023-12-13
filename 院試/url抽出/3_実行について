@@ -10,7 +10,7 @@ https://atmarkit.itmedia.co.jp/ait/articles/0803/07/news147.html
 
 ○ファイルのダウンロード
 https://www.haruru29.net/blog/how-to-download-files-using-powershell/
-
+Invoke-WebRequest "ダウンロードするファイルのURL" -OutFile "保存先ファイルパス"
 
 ○バッチファイルで実行の例
 
