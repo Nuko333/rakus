@@ -30,6 +30,11 @@ https://www.fenet.jp/infla/column/technology/powershell%E3%81%A7%E3%81%AE%E9%96%
 
 ○読み込み
 https://qiita.com/daifukusan/items/906f5bdc719b34052b46
+
+☆文字列が省略されないために
+https://bizlog.tech/windows-powershell-format/#toc1
+ $ur = Invoke-WebRequest -Uri "https://www.spriters-resource.com/game_boy_advance/fireemblemtheblazingblade/sheet/14090/" | ft -Wrap
+
 ----------------------------------------------------------
 
 $response =Invoke-WebRequest "https://www.jstage.jst.go.jp/browse/sugaku/73/4/_contents/-char/ja" -UseBasicParsing
