@@ -1,4 +1,8 @@
 $urr=(Invoke-WebRequest -Uri "https://www.spriters-resource.com/game_boy_advance/fireemblemtheblazingblade/sheet/14090/").images
 $urr.src
 
-updatedのアドレスのpngをdl
+updatedのアドレスのpngをdlする
+$aにアドレスを入れる
+Invoke-WebRequest -Uri $a -OutFile "C:\Users\user\Dropbox\PC\Desktop\sam"
+
+
