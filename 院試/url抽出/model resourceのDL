@@ -7,6 +7,7 @@ donwload
 $cont.Links | Where-Object {$_.href -like "*/model*"}| Select-Object -ExpandProperty href
 
 
+**scarl.txt**
 /pc_computer/scarletbladequeensbladeonline/model/19478/
 /pc_computer/scarletbladequeensbladeonline/model/19479/
 /pc_computer/scarletbladequeensbladeonline/model/19480/
@@ -34,4 +35,17 @@ $cont.Links | Where-Object {$_.href -like "*/model*"}| Select-Object -ExpandProp
 /pc_computer/scarletbladequeensbladeonline/model/19469/
 /pc_computer/scarletbladequeensbladeonline/model/7978/
 /pc_computer/scarletbladequeensbladeonline/model/19470/
+
+
+$head="https://www.models-resource.com"
+$urls=get-content "C:\Users\user\Dropbox\PC\Desktop\scarl.txt"
+
+--------------------------
+$str= -join($head,$urls[1])
+$dlad=Invoke-WebRequest -Uri $str
+
+
+$dlad.Links | Where-Object {$_.href -like "*download*"}| Select-Object -ExpandProperty href
+
+
 
