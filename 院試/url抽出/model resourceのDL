@@ -5,3 +5,33 @@ https://www.models-resource.com/pc_computer/scarletbladequeensbladeonline/
 donwload
 
 $cont.Links | Where-Object {$_.href -like "*/model*"}| Select-Object -ExpandProperty href
+
+
+/pc_computer/scarletbladequeensbladeonline/model/19478/
+/pc_computer/scarletbladequeensbladeonline/model/19479/
+/pc_computer/scarletbladequeensbladeonline/model/19480/
+/pc_computer/scarletbladequeensbladeonline/model/19481/
+/pc_computer/scarletbladequeensbladeonline/model/7979/
+/pc_computer/scarletbladequeensbladeonline/model/19471/
+/pc_computer/scarletbladequeensbladeonline/model/14378/
+/pc_computer/scarletbladequeensbladeonline/model/7970/
+/pc_computer/scarletbladequeensbladeonline/model/7972/
+/pc_computer/scarletbladequeensbladeonline/model/7975/
+/pc_computer/scarletbladequeensbladeonline/model/19472/
+/pc_computer/scarletbladequeensbladeonline/model/19483/
+/pc_computer/scarletbladequeensbladeonline/model/19484/
+/pc_computer/scarletbladequeensbladeonline/model/19474/
+/pc_computer/scarletbladequeensbladeonline/model/19485/
+/pc_computer/scarletbladequeensbladeonline/model/14379/
+/pc_computer/scarletbladequeensbladeonline/model/19486/
+/pc_computer/scarletbladequeensbladeonline/model/14377/
+/pc_computer/scarletbladequeensbladeonline/model/7973/
+/pc_computer/scarletbladequeensbladeonline/model/7950/
+/pc_computer/scarletbladequeensbladeonline/model/7974/
+/pc_computer/scarletbladequeensbladeonline/model/14380/
+/pc_computer/scarletbladequeensbladeonline/model/14381/
+/pc_computer/scarletbladequeensbladeonline/model/7977/
+/pc_computer/scarletbladequeensbladeonline/model/19469/
+/pc_computer/scarletbladequeensbladeonline/model/7978/
+/pc_computer/scarletbladequeensbladeonline/model/19470/
+
