@@ -1,0 +1,7 @@
+https://www.models-resource.com/pc_computer/scarletbladequeensbladeonline/
+
+/model
+
+donwload
+
+$cont.Links | Where-Object {$_.href -like "*/model*"}| Select-Object -ExpandProperty href
